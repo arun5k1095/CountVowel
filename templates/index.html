@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elegant Black Web App</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #222;
+            border: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Elegant Black Web App</h1>
+        <p>This is a simple example of an elegant black-themed web app using Flask.</p>
+        <label for="inputText">Enter a text:</label>
+        <input type="text" id="inputText" oninput="countVowels()">
+        <p id="vowelCount">Number of vowels: 0</p>
+    </div>
+
+    <script>
+        function countVowels() {
+            const inputText = document.getElementById('inputText').value;
+            const vowelCount = (inputText.match(/[aeiouAEIOU]/g) || []).length;
+            document.getElementById('vowelCount').innerText = `Number of vowels: ${vowelCount}`;
+        }
+    </script>
+</body>
+</html>
